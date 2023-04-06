@@ -120,12 +120,13 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("find: Project"),
-	["n|<leader>fr"] = map_callback(function()
+	--[[["n|<leader>fr"] = map_callback(function()
 			require("telescope").extensions.frecency.frecency()
 		end)
 		:with_noremap()
 		:with_silent()
 		:with_desc("find: File by frecency"),
+    --]]
 	["n|<leader>fw"] = map_callback(function()
 			require("telescope").extensions.live_grep_args.live_grep_args()
 		end)
@@ -149,6 +150,7 @@ local plug_map = {
 		:with_desc("edit: Change current direrctory by zoxide"),
 	["n|<leader>fb"] = map_cu("Telescope buffers"):with_noremap():with_silent():with_desc("find: Buffer opened"),
 	["n|<leader>fs"] = map_cu("Telescope grep_string"):with_noremap():with_silent():with_desc("find: Current word"),
+    ["n|<leader>fr"] = map_cu("Telescope resume"):with_noremap():with_silent():with_desc("find: resume"),
 
 	-- Plugin: dap
 	["n|<F6>"] = map_callback(function()
