@@ -149,7 +149,7 @@ local plug_map = {
 		:with_silent()
 		:with_desc("edit: Change current direrctory by zoxide"),
 	["n|<leader>fb"] = map_cu("Telescope buffers"):with_noremap():with_silent():with_desc("find: Buffer opened"),
-	["n|<leader>fs"] = map_cu("Telescope grep_string"):with_noremap():with_silent():with_desc("find: Current word"),
+	["n|<leader>fs"] = map_cu("Telescope grep_string use_regex=true word_match=-w"):with_noremap():with_silent():with_desc("find: Current word"),
     ["n|<leader>fr"] = map_cu("Telescope resume"):with_noremap():with_silent():with_desc("find: resume"),
 
 	-- Plugin: dap
